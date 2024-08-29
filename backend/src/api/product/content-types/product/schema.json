@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 3
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "max": 10000,
+      "min": 0
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "rating": {
+      "required": true,
+      "max": 5,
+      "min": 0,
+      "type": "decimal"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "bedroom",
+        "bathroom",
+        "home_office",
+        "dining_room",
+        "kitchen",
+        "living"
+      ],
+      "required": true
+    }
+  }
+}
